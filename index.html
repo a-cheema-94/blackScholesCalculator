@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>My Project</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <h1>Black Scholes Calculator</h1>
+    
+    <section class="container">
+
+      <p class="startingMsg">Input your values here:</p>
+      
+      <input type="number" id="stockPrice" name="stockPrice" required placeholder="Stock Price (S)">
+      <br>
+      
+      <input type="number" id="strikePrice" name="strikePrice" required placeholder="Strike Price (K)"> 
+      <br>
+      
+      <input type="number" id="volatility" name="volatility" required placeholder="Volatility (&#963)">
+      <br>
+      
+      <input type="number" id="interestRate" name="interestRate" required placeholder="Interest Rate (r)">
+      <br>
+      
+      <input type="number" id="dividendYield" name="dividendYield" required placeholder="Dividend Yield (q)">
+      <br>
+      
+      <input type="number" id="expiry" name="expiry" required placeholder="Time until Expiry (t)">
+      <br>
+      <label for="optionSelector">Choose a Call or a Put option:</label>
+      <br>
+      <select name="optionSelector" id="optionSelector">
+        <option value="default" default>-------------------------------</option>
+        <option value="callOption">Call Option</option>
+        <option value="putOption">Put Option</option>
+      </select>
+      <br>
+      <button class="enter">Enter</button>
+    </section>
+    
+    <section class="results hidden">
+      <p class="final animated-loading">&nbsp;</p>
+      <p class="delta animated-loading">&nbsp;</p>
+      <p class="gamma animated-loading">&nbsp;</p>
+      <p class="theta animated-loading">&nbsp;</p>
+      <p class="vega animated-loading">&nbsp;</p>
+      <p class="rho animated-loading">&nbsp;</p>
+      
+      <button class="reset">Reset</button>
+    </section>
+    
+  </div>
+
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
